@@ -1,0 +1,875 @@
+<!doctype html>
+<html en="utf-8" lang="no" ng-app="app" ng-controller="controller as vm"> 
+<head>    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Game of Thrones quiz 2019</title>    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row" style="padding: 40px;">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <br class="web-only">
+                <br class="web-only">
+                <br class="web-only">
+				<img src="pics/logo.jpg" alt="Game of Thrones quiz" style="max-width: 100%" />            
+            </div>
+        </div>
+        <br class="web-only">
+        <div class="row">
+            <div class="col-lg-12 well easterbg text-center">
+                <h2>Hvem overlever sesong 8?</h2>
+                Gjett og marker status for hver karakter ved enden av sesong 8.<br><br>
+				<strong>Poengberegning:</strong><br>
+				Overlever = 2 poeng<br>
+				Dør = 2 poeng<br>
+				Sittende på Jerntronen = 4 poeng<br>
+				Blir til en White Walker eller Wight = 2 poeng<br><br>
+				<br>
+                <strong>Svarfrist er 14.april (kl. 23:59)</strong>
+                <br class="web-only">
+                <br class="web-only">               
+            </div>           
+            
+        </div>    
+        <br class="web-only">
+        <div class="row">
+            <div class="col-lg-12 table-header">                				
+                <form class="form-horizontal">
+                    <div class="form-group well">      
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/jon.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Jon Snow</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q1 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q1" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q1 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q1" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q1 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q1" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q1 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q1" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+					<div class="form-group well">           
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/sansa.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Sansa Stark</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q2 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q2" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q2 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q2" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q2 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q2" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q2 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q2" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+						<div class="form-group well">      
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/arya.png" class="circular--square"/>
+                        </div>						
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Arya Stark</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q3 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q3" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q3 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q3" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q3 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q3" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q3 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q3" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">          
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/bran.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Bran Stark</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q4 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q4" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q4 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q4" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q4 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q4" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q4 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q4" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">      
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/cersei.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Cersei Lannister</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q5 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q5" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q5 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q5" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q5 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q5" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q5 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q5" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">       
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/jamie.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Jamie Lannister</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q6 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q6" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q6 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q6" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q6 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q6" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q6 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q6" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">   
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/tyrion.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Tyrion Lannister</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q7 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q7" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q7 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q7" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q7 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q7" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q7 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q7" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">  
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/daenerys.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Daenerys Targaryen</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q8 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q8" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q8 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q8" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q8 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q8" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q8 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q8" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">             
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/yara.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Yara Greyjoy</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q9 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q9" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q9 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q9" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q9 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q9" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q9 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q9" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">    
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/theon.png" class="circular--square"/>
+                        </div>                    
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Theon Greyjoy</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q10 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q10" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q10 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q10" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q10 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q10" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q10 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q10" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">     
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/euron.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Euron Greyjoy</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q11 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q11" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q11 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q11" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q11 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q11" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q11 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q11" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">   
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/hound.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>The Hound</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q12 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q12" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q12 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q12" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q12 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q12" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q12 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q12" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">          
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/mountain.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>The Mountain</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q13 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q13" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q13 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q13" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q13 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q13" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q13 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q13" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">          
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/melisandre.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Melisandre</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q14 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q14" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q14 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q14" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q14 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q14" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q14 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q14" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>					
+                    </div>
+					<br>
+                    <div class="form-group well"> 
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/jorah.png" class="circular--square"/>
+                        </div>                  
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Jorah Mormont</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q15 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q15" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q15 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q15" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q15 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q15" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q15 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q15" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>					
+                    </div>
+					<br>
+                    <div class="form-group well"> 
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/samwell.png" class="circular--square"/>
+                        </div>                       
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Samwell Tarly</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q16 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q16" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q16 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q16" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q16 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q16" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q16 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q16" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">                    
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/gilly.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Gilly</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q17 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q17" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q17 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q17" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q17 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q17" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q17 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q17" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">              
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/samchild.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Sam (barn)</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q18 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q18" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q18 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q18" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q18 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q18" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q18 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q18" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">   
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/varys.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Lord Varys</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q19 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q19" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q19 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q19" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q19 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q19" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q19 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q19" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">      
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/brienne.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Brienne of Tarth</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q20 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q20" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q20 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q20" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q20 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q20" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q20 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q20" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">  
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/bronn.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Bronn</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q21 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q21" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q21 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q21" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q21 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q21" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q21 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q21" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">    
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/davos.png" class="circular--square"/>
+                        </div>                    
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Davos Seaworth</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q22 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q22" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q22 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q22" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q22 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q22" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q22 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q22" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">              
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/podrick.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Podrick Payne</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q23 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q23" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q23 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q23" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q23 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q23" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q23 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q23" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">   
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/tormund.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Tormund</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q24 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q24" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q24 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q24" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q24 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q24" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q24 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q24" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">      
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/greyworm.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Grey Worm</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q25=== 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q25" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q25 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q25" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q25 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q25" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q25 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q25" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">       
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/missandei.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Missandei</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q26 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q26" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q26 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q26" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q26 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q26" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q26 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q26" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">  
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/daario.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Daario Naharis</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q27 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q27" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q27 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q27" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q27 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q27" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q27 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q27" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">         
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/beric.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Beric Dondarrion</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q28 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q28" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q28 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q28" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q28 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q28" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q28 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q28" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">                
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/gendry.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Gendry</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q29 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q29" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q29 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q29" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q29 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q29" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q29 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q29" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>
+					<br>
+                    <div class="form-group well">        
+						<div class="col-lg-4 text-center">                            
+							<img src="pics/nightking.png" class="circular--square"/>
+                        </div>					
+                        <div class="col-lg-4 web-only text-center">
+							<h1><strong>Night King</strong></h1>
+							<br>
+							<br>
+							<div class="btn-group" data-toggle="buttons">
+							  <label class="btn btn-default" ng-class="{'btn-success': vm.answer.q30 === 'L'}" style="padding-right:10px;">
+								<input type="radio" name="options" id="option1" ng-model="vm.answer.q30" value="L"> Overlever
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-danger': vm.answer.q30 === 'D'}">
+								<input type="radio" name="options" id="option2" ng-model="vm.answer.q30" value="D"> Dør
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-warning': vm.answer.q30 === 'T'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q30" value="T"> Tronen
+							  </label>&nbsp;
+							  <label class="btn btn-default" ng-class="{'btn-info': vm.answer.q30 === 'W'}">
+								<input type="radio" name="options" id="option3" ng-model="vm.answer.q30" value="W"> White Walker
+							  </label>
+							</div>
+                        </div>						
+                    </div>												
+                </form>
+            </div>
+        </div>              
+        <br><br>       
+           <div class="row web-only">
+            <div class="col-lg-12 well">
+               <div class="text-center">
+                <h2>Hvem er du?</h2>                
+                <br>
+                </div>
+                <div class="col-lg-6 col-lg-offset-3">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inpName" class="col-sm-2 control-label">Navn</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="inpName" ng-model="vm.answer.name" maxlength="100">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inpEmail" class="col-sm-2 control-label">Epost</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" id="inpEmail" ng-model="vm.answer.email" maxlength="100">
+                            </div>
+                        </div>
+                    </form>
+                    <br>
+                </div>
+            </div>
+        </div>              
+        <div class="row" ng-if="vm.hasAnswered" ng-cloak>
+            <div class="col-lg-6 col-lg-offset-3 text-center">
+                <h3><i class="fa fa-check fa-2x" style="color:green;padding-right:10px;"></i>Svaret er levert</h3>
+                <br>
+                Man kan svare flere ganger, det er det siste svaret som gjelder.
+            </div>
+        </div>
+		<div class="row" ng-if="vm.error" ng-cloak >
+			<div class="col-lg-6 col-lg-offset-3 alert alert-danger text-center">{{vm.error}}</div>
+		</div>  
+        <div class="row web-only" ng-if="!vm.hasAnswered" ng-cloak>
+            <div class="col-lg-12 text-center" style="padding:40px;">             
+                <a class="btn btn-primary btn-lg" ng-click="vm.submit()" ng-disabled="vm.isSubmitting">
+                    <span ng-if="!vm.isSubmitting">Send inn svar</span>
+                    <span ng-if="vm.isSubmitting"><i class="fa fa-circle-o-notch fa-spin fa-fw" style="color:white;"></i></span>
+                    </a>
+                <br><br>
+                <h5>Man kan sende inn flere ganger, det er siste innsendte svar som teller</h5>
+                </div>       
+            </div>
+        </div>
+    </div>
+	<br>
+    <div class="row well table-header footer text-center" style="margin-left:0; margin-right:0;">
+        <div class="col-lg-6 col-lg-offset-3 text-center">
+            <br>
+            <h1><strong>Novanet</strong></h1>            
+            <br>
+            <h4><strong>De beste folkene, de beste løsningene.</strong></h4>
+            <br>
+            <h4>Enten du styrer prosjektet selv eller om vi setter sammen et kvalifisert team, og tar ansvaret for selve prosjektgjennomføringen, så hjelper vi deg med å lykkes med din IT-satsing.</h4>
+            <br>
+            <h3><a href="http://www.novanet.no">Les mer om oss på Novanet.no</a></h3>
+            <br>
+            <br>
+        </div>
+    </div>
+</div>
+<script>
+    var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-20608213-1']);
+        _gaq.push(['_setDomainName', 'got.novanet.no' ]);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+</script>
+</body>
+</html>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-cookies.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/lodash/4.11.1/lodash.min.js"></script>
+<script type="text/javascript" src="angular.js"></script>

@@ -1,0 +1,98 @@
+        
+        * {
+            font-family: 'Open Sans', sans-serif;
+
+        }
+        @page  { 
+            size: auto;   /* auto is the initial value */ 
+
+            /* this affects the margin in the printer settings */ 
+            margin: 25mm 25mm 25mm 25mm;  
+        } 
+
+        @media print {
+            .web-only {
+                display: none !important;
+            }
+        }
+
+        body {
+            background-color: white;
+        }
+
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+
+        .logo {
+            margin-bottom: 20px;
+            width: 150px;
+        }
+        .about-novanet {
+            background-color: #C8ECDF;
+        }
+
+        .about-comp {
+            background-color: #F7F396;
+        }
+
+        .well {
+            border: 0;       
+            padding-right: 20px;
+            padding-left:40px;
+            padding-top: 10px;
+            padding-bottom: 10px;     
+        }
+
+        .table-header {
+            margin-bottom: 0;
+        }
+        .table {
+            margin-bottom:0;
+        }
+        li {
+            margin-top: 15px;
+            margin-left: 10px;
+            font-size: 2rem;
+        }
+
+        h1 {
+            font-size: 5rem;
+        }
+
+        h2 {
+            padding-bottom: 15px;
+        }
+
+        label {
+            font-weight: normal;
+        }
+        .footer {
+          background-color:#FCFAEB;
+        }
+        .easterbg {
+            background-color: #F7F396;
+        }
+
+        .form-header{
+            background-color: #eee;
+        }
+        .question{
+            padding-top: 8px;
+            font-size:16px;
+        }
+        hr {margin: 0;}
+		
+		.btn-group{
+			margin-bottom: 20px;
+		}
+		
+		.circular--square {
+			border-radius: 50%;
+			border: 1px solid silver;
+			max-height: 200px;
+		}
+		.btn-group{
+			margin-left: -35px;
+			margin-right: -35px;
+		}
