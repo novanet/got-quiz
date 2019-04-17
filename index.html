@@ -9,67 +9,273 @@
 	<meta property="og:url" content="https://got.novanet.no" />
 	<meta property="og:image" content="https://got.novanet.no/pics/logo.jpg" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-	<div class="row">
-	<div class="col-lg-12">
+		<div class="row">
+			<div class="col-lg-12">
 				<a href="http://www.novanet.no"><img src="https://novanet.no/assets/NN_Logo/NN_Logo_Stor_Over_4cm_bredde/RGB/NN_Logo_Stor_RGB.svg" class="logo-left"></a> 
 			</div>
-	</div>
-        <div class="row" style="padding: 40px;">			
+		</div>
+        <div class="row" style="padding-top: 40px;">			
             <div class="col-lg-8 col-lg-offset-2 text-center">				                                
 				<img src="pics/logo.jpg" alt="Game of Thrones quiz" style="max-width: 100%" />            
             </div>
         </div>
-        <br class="web-only">
-        <div class="row">
-            <div class="col-lg-12 well easterbg text-center">
+		<div class="row well easterbg">
+            <div class="col-lg-6 col-lg-offset-3 text-left">
                 <h2>Hvem overlever sesong 8?</h2>
-                Gjett og marker status for hver karakter ved enden av sesong 8.<br>
-				Poeng oppdateres etter hver episode.
-				<br><br>
-				<strong>Poengberegning:</strong><br>
-				Overlever = 2 poeng<br>
-				Dør = 2 poeng<br>
-				Sittende på Jerntronen = 6 poeng<br>
-				Blir til en White Walker eller Wight = 2 poeng<br><br>
-				<br>
-                <strong>Svarfrist er 14. april (kl. 23:59)</strong>
-                <br class="web-only">
-                <br class="web-only">               
-            </div>           
-            
+				<div style="padding-bottom:3px"><strong>Poengberegning:</strong></div>
+				<div style="padding-bottom:3px"><span class="label label-success answer">L</span> - Overlever = 2 poeng</div>
+				<div style="padding-bottom:3px"><span class="label label-danger answer">D</span> - Dør = 2 poeng</div>
+				<div style="padding-bottom:3px"><span class="label label-warning answer">T</span> - Sittende på Jerntronen = 6 poeng</div>
+				<div><span class="label label-info">W</span> - Blir til en White Walker eller Wight = 2 poeng</div>       
+            </div>            
         </div>    
-        <br class="web-only">
         <div class="row">
             <div class="col-lg-12 table-header text-center">                				
-                <form class="form-horizontal">
-                    <div class="form-group well">      
-						Det er nå stengt for innsending. 				
-                    </div>												
-                </form>
+                <table class="table" style="font-size:smaller">
+					<thead>
+						<tr>
+							<th>Navn</th>
+							<th>Jon Snow</th>
+							<th>Sansa Stark</th>
+							<th>Arya Stark</th>
+							<th>Bran Stark</th>
+							<th>Cersei Lannister</th>
+							<th>Jamie Lannister</th>
+							<th>Tyrion Lannister</th>
+							<th>Daenerys Targaryen</th>
+							<th>Yara Greyjoy</th>
+							<th>Theon Greyjoy</th>
+							<th>Euron Greyjoy</th>
+							<th>The Hound</th>
+							<th>The Mountain</th>
+							<th>Melisandre</th>
+							<th>Jorah Mormont</th>
+							<th>Samwell Tarly</th>
+							<th>Gilly</th>
+							<th>Sam (barn)</th>
+							<th>Lord Varys</th>
+							<th>Brienne of Tarth</th>
+							<th>Bronn</th>
+							<th>Davos Seaworth</th>
+							<th>Podrick Payne</th>
+							<th>Tormund</th>
+							<th>Grey Worm</th>
+							<th>Missandei</th>
+							<th>Daario Naharis</th>
+							<th>Beric Dondarrion</th>
+							<th>Gendry</th>
+							<th>Night King</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="answer in ::vm.answers">
+							<td>{{::answer.Name}}</td>
+							<td>
+								<span ng-if="answer.Q1 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q1 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q1 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q1 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q2 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q2 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q2 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q2 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q3 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q3 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q3 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q3 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q4 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q4 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q4 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q4 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q5 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q5 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q5 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q5 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q6 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q6 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q6 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q6 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q7 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q7 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q7 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q7 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q8 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q8 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q8 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q8 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q9 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q9 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q9 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q9 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q10 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q10 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q10 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q10 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q11 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q11 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q11 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q11 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q12 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q12 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q12 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q12 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q13 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q13 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q13 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q13 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q14 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q14 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q14 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q14 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q15 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q15 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q15 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q15 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q16 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q16 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q16 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q16 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q17 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q17 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q17 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q17 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q18 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q18 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q18 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q18 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q19 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q19 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q19 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q19 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q20 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q20 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q20 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q20 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q21 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q21 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q21 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q21 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q22 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q22 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q22 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q22 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q23 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q23 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q23 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q23 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q24 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q24 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q24 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q24 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q25 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q25 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q25 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q25 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q26 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q26 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q26 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q26 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q27 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q27 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q27 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q27 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q28 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q28 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q28 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q28 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q29 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q29 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q29 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q29 === 'W'" class="label label-info">W</span>								
+							</td>
+							<td>
+								<span ng-if="answer.Q30 === 'L'" class="label label-success">L</span>
+								<span ng-if="answer.Q30 === 'D'" class="label label-danger">D</span>
+								<span ng-if="answer.Q30 === 'T'" class="label label-warning">T</span>
+								<span ng-if="answer.Q30 === 'W'" class="label label-info">W</span>								
+							</td>											
+						</tr>
+					</tbody>
+				</table>
             </div>
         </div> 	        
-        </div> 	        
-    <div class="row well table-header footer text-center" style="margin-left:0; margin-right:0;">
-        <div class="col-lg-6 col-lg-offset-3 text-center">
-            <br>
+    </div> 	        
+	<div class="row well table-header footer text-center" style="margin-left:0; margin-right:0;">
+		<div class="col-lg-6 col-lg-offset-3 text-center">
+			<br>
 			<br>
 			
-            <a href="http://www.novanet.no"><img src="https://novanet.no/assets/NN_Logo/NN_Logo_Stor_Over_4cm_bredde/RGB/NN_Logo_Stor_RGB.svg" class="logo-footer"></a>            
-            <br>
+			<a href="http://www.novanet.no"><img src="https://novanet.no/assets/NN_Logo/NN_Logo_Stor_Over_4cm_bredde/RGB/NN_Logo_Stor_RGB.svg" class="logo-footer"></a>            
 			<br>
-            <h4><strong>De beste folkene, de beste løsningene</strong></h4>
-            
-            <h3><a href="http://www.novanet.no" class="footer-button">Les mer</a></h3>
-            <br>
-            <br>
-        </div>
-    </div>
+			<br>
+			<h4><strong>De beste folkene, de beste løsningene</strong></h4>
+			
+			<h3><a href="http://www.novanet.no" class="footer-button">Les mer</a></h3>
+			<br>
+			<br>
+		</div>
+	</div>
 </div>
 <script>
     var _gaq = _gaq || [];
