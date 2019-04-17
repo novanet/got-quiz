@@ -74,7 +74,7 @@
 					</thead>
 					<tbody>
 						<tr ng-repeat="answer in ::vm.answers">
-							<td>{{::answer.Name}}</td>
+							<td class="text-left">{{::answer.Name}}</td>
 							<td>
 								<span ng-if="answer.Q1 === 'L'" class="label label-success">L</span>
 								<span ng-if="answer.Q1 === 'D'" class="label label-danger">D</span>
