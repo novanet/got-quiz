@@ -75,10 +75,10 @@
 				<thead>
 					<tr>
 						<th>Navn</th>
-						<th class="text-center">Antall <span class="label label-success">L</span></th>
-						<th class="text-center">Antall <span class="label label-danger">D</span></th>
-						<th class="text-center">Antall <span class="label label-warning">T</span></th>
-						<th class="text-center">Antall <span class="label label-info">W</span></th>
+						<th class="text-center">Antall<br><span class="label label-success">L</span></th>
+						<th class="text-center">Antall<br><span class="label label-danger">D</span></th>
+						<th class="text-center">Antall<br><span class="label label-warning">T</span></th>
+						<th class="text-center">Antall<br><span class="label label-info">W</span></th>
 						
 						<th ng-repeat="c in ::vm.characters">
 							<span class="label" ng-class="{'label-success' : c.Status == 'L', 'label-danger': c.Status == 'D', 'label-warning': c.Status == 'T', 'label-info': c.Status == 'W'}" >{{c.Name}}</span>
