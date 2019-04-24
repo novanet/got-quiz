@@ -12,25 +12,45 @@
     function controller(dataservice) {
         var vm = this;
         vm.answer = {};
-        vm.error = null;     
+        vm.displayPoints = true;
+		vm.error = null;
+	    vm.toggleDisplay = toggleDisplay;
 
-		dataservice.get()
+		dataservice.getAnswers()
             .then(function(result){
                 vm.answers = result;
-            });		        
-    }
+            });		
+
+		dataservice.getCharacters()
+            .then(function(result){
+                vm.characters = result;
+            });			
+			
+		function toggleDisplay(){
+			vm.displayPoints = !vm.displayPoints;
+		}
+    }	 
 
     function dataservice($q, $http) {
         return {
-			get: _.once(get)
+			getAnswers: _.once(getAnswers),
+			getCharacters: _.once(getCharacters)
         }
-		function get() {
+		function getAnswers() {
             return $q(function (resolve, reject) {
                 $http.get('https://novanet-got-quiz-api.azurewebsites.net/api/answers')
                     .then(function (response) {
                         resolve(response.data);
                     });
             });
-        }       
+        } 
+		function getCharacters() {
+            return $q(function (resolve, reject) {
+                $http.get('https://novanet-got-quiz-api.azurewebsites.net/api/characters')
+                    .then(function (response) {
+                        resolve(response.data);
+                    });
+            });
+        }  		
     }    
 })();
